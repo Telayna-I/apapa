@@ -31,6 +31,7 @@ export const styles = StyleSheet.create({
     },
     listItemContainer:{
         paddingVertical: 20,
+        flexDirection: 'row',
         backgroundColor: '#212121',
         borderRadius: 5,
         shadowColor: "#000",
@@ -41,7 +42,7 @@ export const styles = StyleSheet.create({
         shadowOpacity: 0.27,
         shadowRadius: 4.65,
         elevation: 6,
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         marginBottom: 5
     },
     listItem:{
@@ -81,4 +82,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "space-around"
     },
+    itemListButtons: {
+        flexDirection: 'row'
+    }
 });

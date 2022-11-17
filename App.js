@@ -8,6 +8,7 @@ export default function App() {
   const [ taskList, setTaskList ] = useState([])
   const [ selectedTask, setSelectedTask ] = useState(null)
   const [ modalVisible, setModalVisible ] = useState(false)
+  const [ complete, setComplete ] = useState(false)
 
   const handleTasks = () => {
     if(task.length > 0){
@@ -22,9 +23,13 @@ export default function App() {
   }
 
   const renderItem = ({item}) => (
-    <TouchableOpacity key={item.id} style={styles.listItemContainer} onPress={() => handleSelected(item)} >
+    <View key={item.id} style={styles.listItemContainer}>
       <Text style={styles.listItem}>{item.value}</Text>
-    </TouchableOpacity>
+      <View style={styles.itemListButtons} >
+        <TouchableOpacity style={{paddingHorizontal: 15}} onPress={() => handleSelected(item)}><Text style={{fontSize: '20px'}}>❌</Text></TouchableOpacity>
+        <TouchableOpacity style={{paddingHorizontal: 15}}><Text style={{fontSize: '20px'}}>✅</Text></TouchableOpacity>
+      </View>
+    </View>
   )
 
   const handleCancel = () =>{
