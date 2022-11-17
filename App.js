@@ -22,12 +22,16 @@ export default function App() {
     setModalVisible(true);
   }
 
+  const handleCompleted = () => {
+    setComplete(!complete)
+  }
+
   const renderItem = ({item}) => (
-    <View key={item.id} style={styles.listItemContainer}>
+    <View key={item.id} style={complete ? styles.listItemContainerCompleted : styles.listItemContainer}>
       <Text style={styles.listItem}>{item.value}</Text>
       <View style={styles.itemListButtons} >
         <TouchableOpacity style={{paddingHorizontal: 15}} onPress={() => handleSelected(item)}><Text style={{fontSize: '20px'}}>❌</Text></TouchableOpacity>
-        <TouchableOpacity style={{paddingHorizontal: 15}}><Text style={{fontSize: '20px'}}>✅</Text></TouchableOpacity>
+        <TouchableOpacity style={{paddingHorizontal: 15}} onPress={handleCompleted} ><Text style={{fontSize: '20px'}}>✅</Text></TouchableOpacity>
       </View>
     </View>
   )
