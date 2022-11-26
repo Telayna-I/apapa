@@ -11,6 +11,7 @@ export const styles= StyleSheet.create({
     },
     title:{
         fontSize: 18,
+        fontFamily: 'Poppins-Regular',
         color: colors.textBlack,
         textAlign: 'center',
         paddingVertical: 20,
@@ -41,5 +42,24 @@ export const styles= StyleSheet.create({
         color: colors.textBlack,
         paddingVertical: 5,
         textAlign:'center',
-    }
+    },
+    confirmedContainer:{
+        width: '70%',
+        height: 180,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        borderRadius: 5,
+        marginVertical: 30,
+
+    },
+    confirmedTitle:{
+        fontSize: 16,
+    },
+    confirmedNumber:{
+        fontSize: 22,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        padding: 5,
+        backgroundColor: colors.primary
+    },
 })
